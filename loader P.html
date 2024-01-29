@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loader</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .section1 {
+            height: 100vh;
+            width: 100%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            height: 90vh;
+            width: 500px;
+            border: 1px solid #000;
+            position: relative;
+        }
+
+        .pic {
+            height: 40vh;
+            width: 100%;
+            /* border: 1px solid #000; */
+            border-radius: 20px;
+            background-color: pink;
+            opacity: 0.5;
+        }
+
+        .heading {
+            height: 5vh;
+            width: 100%;
+            background-color: pink;
+            border-radius: 20px;
+            opacity: 0.5;
+            margin-top: 5vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 700;
+        }
+
+        .pgr {
+            height: 2vh;
+            width: 80%;
+            margin: auto;
+            background-color: pink;
+            border-radius: 20px;
+            opacity: 0.5;
+            margin-top: 3vh;
+        }
+
+        .parent {
+            height: 13vh;
+            width: 100%;
+            /* border: 1px solid #000; */
+            margin-top: 5VH;
+            display: flex;
+        }
+
+        .p1 {
+            height: 100%;
+            width: 50%;
+            /* border: 1px solid #000; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .circle {
+            height: 70px;
+            width: 70px;
+            background-color: pink;
+            border-radius: 50%;
+            opacity: 0.5;
+        }
+
+        .p2 {
+            height: 100%;
+            width: 50%;
+            /* border: 1px solid #000; */
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .nam {
+            height: 2vh;
+            width: 90%;
+            background-color: pink;
+            border-radius: 8px;
+            opacity: 0.5;
+        }
+
+        .dest {
+            height: 2vh;
+            width: 90%;
+            background-color: pink;
+            border-radius: 8px;
+            margin-top: 5px;
+            opacity: 0.5;
+        }
+
+        .ani {
+            height: 100%;
+            width: 10%;
+            background-color: pink;
+            border-radius: 50%;
+            opacity: 0.3;
+            position: absolute;
+            left: 0;
+            top: 0;
+            animation: ani 2s linear infinite;
+            transition: all 0.2s linear;
+        }
+
+        @keyframes ani {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+
+                transform: translateX(400px);
+            }
+        }
+
+        .nonee {
+            display: none;
+        }
+
+        .no {
+            background-color: white;
+            opacity: 1;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section class="section1">
+
+        <div class="box">
+
+            <div class="pic sam "></div>
+            <div class="heading sam"></div>
+            <div class="pgr sam"></div>
+            <div class="pgr sam"></div>
+            <div class="pgr sam"></div>
+            <div class="parent sam">
+                <div class="p1 sam">
+
+                    <div class="circle sam"></div>
+                </div>
+                <div class="p2 sam">
+                    <div class="nam sam"></div>
+                    <div class="dest sam"></div>
+                </div>
+            </div>
+            <div class="ani"></div>
+        </div>
+    </section>
+    <script>
+
+        let a = document.querySelector(".pic")
+        let b = document.querySelector(".heading")
+        let c = document.querySelector(".pgr")
+        let d = document.querySelector(".circle")
+        let e = document.querySelector(".nam")
+        let f = document.querySelector(".dest")
+        let g = document.querySelector(".ani")
+        let s = document.querySelectorAll(".sam")
+        console.log(s);
+
+
+
+        function stop() {
+            a.innerHTML =
+                '<img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80" alt="" />'
+            b.innerHTML = 'WE ENGINE YOUR SUCCESS'
+            c.innerHTML = 'you are the future of pakistan. we built your progress we trained you for your country we give you platform for surve your country  we know how treat with humanity'
+            d.innerHTML = '<img src="https://randomuser.me/api/portraits/men/45.jpg" alt="" />'
+            e.innerHTML = 'wajid'
+            f.innerHTML = 'Full stack Developer'
+            g.classList.add('nonee')
+
+            // s.forEach(function(wj){wj.classList.add("no")}) 
+            for (let dd of s) {
+
+                dd.classList.add("no")
+            }
+
+        }
+
+        setInterval(stop, 2000)
+
+    </script>
+
+
+</body>
+
+</html>
